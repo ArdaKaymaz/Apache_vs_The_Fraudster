@@ -1,4 +1,4 @@
-# Apache_vs_Fraudster
+# Apache vs The Fraudster
 
 After handling configurations of Apache Hadoop, Hive and Spark, all of these applications started and "creditcard.csv" file uploaded to HDFS.
 
