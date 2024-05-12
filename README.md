@@ -1,72 +1,18 @@
-
 ![apache_fraudster](https://github.com/ArdaKaymaz/Apache_vs_The_Fraudster/assets/146623362/f543c25f-5b6f-4273-ab58-2509b3c67e81)
 
 # Apache vs The Fraudster
 
-After handling configurations of Apache Hadoop, Hive and Spark, all of these applications started and "creditcard.csv" file uploaded to HDFS.
+<strong>Abstract</strong>
+This project covers a comprehensive case study on fraud detection utilizing big data technologies, specifically Apache Hadoop, Hive, and Spark. The project aims to develop a robust system for detecting fraudulent activities in large datasets. To achieve this, specific versions of Apache Hadoop (3.2.1), Hive (3.1.2), and Spark (3.2.1) were employed to ensure stability and efficiency. The process involved distributing fraud detection data using Apache Hadoop, creating structured tables with Apache Hive, and implementing machine learning algorithms for fraud detection using Apache Spark. In addition to this, significant differences was found in ML algorithms' results between Spark 3.2.1 and Spark 3.5.1.
 
-<pre><code>$ jps</code></pre>
-```
-4033 DataNode
-7490 ExecutorLauncher
-7332 SparkSubmit
-4533 ResourceManager
-7605 Jps
-4296 SecondaryNameNode
-3865 NameNode
-7546 YarnCoarseGrainedExecutorBackend
-4700 NodeManager
-5919 RunJar
-```
+<strong>Introduction</strong>
+Fraud detection is a critical aspect of data analytics, particularly in industries such as finance, insurance, and e-commerce. With the exponential growth of data, traditional fraud detection methods have become inadequate in handling large-scale datasets. Big data technologies offer scalable solutions to address this challenge by leveraging distributed computing frameworks. In this study, we explore the integration of Apache Hadoop, Hive, and Spark to develop a robust fraud detection system.
 
+<strong>Methodology</strong>
+Data Preparation: The project begins with preparing the fraud detection dataset for analysis. Raw data is distributed across the Hadoop cluster to enable parallel processing and efficient data storage.
 
-<pre><code>$ hdfs dfs -put /home/arda/Downloads/creditcard.csv /</code></pre>
+Data Processing with Hive: Apache Hive is utilized to create structured tables and perform data transformation tasks. Hive's SQL-like query language (HiveQL) simplifies the process of querying and analyzing large datasets stored in Hadoop Distributed File System (HDFS).
 
-Created a database and a table following the uploading on Hive.
+Machine Learning Model Development with Spark: Apache Spark is employed for building machine learning models to detect fraudulent activities. Spark's MLlib library provides a wide range of algorithms and tools for scalable machine learning tasks. In this study, various supervised and unsupervised learning algorithms are explored to identify fraudulent patterns within the dataset.
 
-<pre><code>hive > CREATE DATABASE apache_vs_fraudster;</code></pre>
-
-<pre><code>hive > CREATE EXTERNAL TABLE fraud_detection (
-    `Time` double,
-    V1 double,
-    V2 double,
-    V3 double,
-    V4 double,
-    V5 double,
-    V6 double,
-    V7 double,
-    V8 double,
-    V9 double,
-    V10 double,
-    V11 double,
-    V12 double,
-    V13 double,
-    V14 double,
-    V15 double,
-    V16 double,
-    V17 double,
-    V18 double,
-    V19 double,
-    V20 double,
-    V21 double,
-    V22 double,
-    V23 double,
-    V24 double,
-    V25 double,
-    V26 double,
-    V27 double,
-    V28 double,
-    AMOUNT double,
-    CLASS int
-)
-ROW FORMAT DELIMITED
-FIELDS TERMINATED BY ',';
-</code></pre>
-
-Load "creditcard.csv" into "fraud_detection" table:
-
-<pre><code>hive > LOAD DATA INPATH '/creditcard.csv' INTO TABLE fraud_detection;</code></pre>
-
-Run PySpark with .py script
-
-<pre><code> $ ./spark-submit --master yarn --queue dev /home/hadoop/fraud_script.py</code></pre>
+Model Evaluation and Deployment: The developed machine learning models are evaluated using appropriate performance metrics such as precision, recall, and F1-score. Once the models demonstrate satisfactory performance, they are deployed into production environments for real-time or batch processing of incoming data streams.
