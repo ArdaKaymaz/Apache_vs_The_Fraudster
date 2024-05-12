@@ -34,7 +34,7 @@ The developed machine learning models are evaluated using appropriate performanc
 The integration of Apache Hadoop, Hive, and Spark offers a scalable and efficient solution for fraud detection in large datasets. The utilization of distributed computing frameworks enables parallel processing of data, reducing computation time and improving overall system performance. The machine learning models developed using Spark exhibit promising results in detecting fraudulent activities, achieving high accuracy and reliability.
 
 ### Logistic Regression Results in Spark 3.2.1
-![Uploading logistic_regression_pyspark.jpg…]()
+![logistic_regression_pyspark](https://github.com/ArdaKaymaz/Apache_vs_The_Fraudster/assets/146623362/4fadc73f-8583-4e29-8ca8-7fd9ba3c56c6)
 
 ### Logistic Regression Results in Spark 3.5.1
 ![logistic_regression](https://github.com/ArdaKaymaz/Apache_vs_The_Fraudster/assets/146623362/7a4c1d2e-a4cb-4928-b8db-1fd7ed07c0cd)
