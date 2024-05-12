@@ -2,7 +2,7 @@
 
 After handling configurations of Apache Hadoop, Hive and Spark, all of these applications started and "creditcard.csv" file uploaded to HDFS.
 
-```
+<pre><code>
 $ jps
 
 4033 DataNode
@@ -15,7 +15,7 @@ $ jps
 7546 YarnCoarseGrainedExecutorBackend
 4700 NodeManager
 5919 RunJar
-```
+</code></pre>
 ```
 $ hdfs dfs -put /home/arda/Downloads/creditcard.csv /
 ```
