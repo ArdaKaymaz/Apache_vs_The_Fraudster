@@ -1,5 +1,5 @@
 
-![apache_fraudster](https://github.com/ArdaKaymaz/Apache_vs_The_Fraudster/assets/146623362/b785a3cd-12a7-429d-a95a-7d513c640651)
+![apache_fraudster](https://github.com/ArdaKaymaz/Apache_vs_The_Fraudster/assets/146623362/f543c25f-5b6f-4273-ab58-2509b3c67e81)
 
 # Apache vs The Fraudster
 
