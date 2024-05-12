@@ -16,9 +16,9 @@ $ jps
 4700 NodeManager
 5919 RunJar
 ```
-
+```
 $ hdfs dfs -put /home/arda/Downloads/creditcard.csv /
-
+```
 Created a database and a table following the uploading on Hive.
 
 ```
