@@ -2,8 +2,8 @@
 
 After handling configurations of Apache Hadoop, Hive and Spark, all of these applications started and "creditcard.csv" file uploaded to HDFS.
 
+<pre><code>$ jps</code></pre>
 ```
-$ jps
 4033 DataNode
 7490 ExecutorLauncher
 7332 SparkSubmit
@@ -17,17 +17,13 @@ $ jps
 ```
 
 
-```
-$ hdfs dfs -put /home/arda/Downloads/creditcard.csv /
-```
+<pre><code>$ hdfs dfs -put /home/arda/Downloads/creditcard.csv /</code></pre>
 
 Created a database and a table following the uploading on Hive.
 
-```
-hive> CREATE DATABASE apache_vs_fraudster;
-```
-```
-hive> CREATE EXTERNAL TABLE fraud_detection (
+<pre><code>hive > CREATE DATABASE apache_vs_fraudster;</code></pre>
+
+<pre><code>hive > CREATE EXTERNAL TABLE fraud_detection (
     `Time` double,
     V1 double,
     V2 double,
@@ -62,16 +58,12 @@ hive> CREATE EXTERNAL TABLE fraud_detection (
 )
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY ',';
-```
+</code></pre>
 
 Load "creditcard.csv" into "fraud_detection" table:
 
-```
-hive> LOAD DATA INPATH '/creditcard.csv' INTO TABLE fraud_detection;
-```
+<pre><code>hive > LOAD DATA INPATH '/creditcard.csv' INTO TABLE fraud_detection;</code></pre>
 
-Read the dataset in Spark:
+Run PySpark with .py script
 
-```
->>> df = spark.read.format("csv").option("header", True).option("separator", True).load("hdfs:///user/hive/warehouse/apache_vs_fraudster.db/fraud_detection/creditcard.csv")
-```
+<pre><code> $ ./spark-submit --master yarn --queue dev /home/hadoop/fraud_script.py</code></pre>
