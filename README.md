@@ -1,3 +1,6 @@
+
+![apache_fraudster](https://github.com/ArdaKaymaz/Apache_vs_The_Fraudster/assets/146623362/b785a3cd-12a7-429d-a95a-7d513c640651)
+
 # Apache vs The Fraudster
 
 After handling configurations of Apache Hadoop, Hive and Spark, all of these applications started and "creditcard.csv" file uploaded to HDFS.
