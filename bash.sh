@@ -2,8 +2,9 @@
 
 After handling configurations of Apache Hadoop, Hive and Spark, all of these applications started and "creditcard.csv" file uploaded to HDFS.
 
-```bash
+
 $ jps
+```
 4033 DataNode
 7490 ExecutorLauncher
 7332 SparkSubmit
