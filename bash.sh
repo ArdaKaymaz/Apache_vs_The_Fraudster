@@ -2,8 +2,8 @@
 
 After handling configurations of Apache Hadoop, Hive and Spark, all of these applications started and "creditcard.csv" file uploaded to HDFS.
 
+```shell
 $ jps
-```
 4033 DataNode
 7490 ExecutorLauncher
 7332 SparkSubmit
@@ -16,14 +16,16 @@ $ jps
 5919 RunJar
 ```
 
-
-<pre><code>$ hdfs dfs -put /home/arda/Downloads/creditcard.csv /</code></pre>
+```shell
+$ hdfs dfs -put /home/arda/Downloads/creditcard.csv /```
 
 Created a database and a table following the uploading on Hive.
 
-<pre><code>hive > CREATE DATABASE apache_vs_fraudster;</code></pre>
+```shell
+hive > CREATE DATABASE apache_vs_fraudster;```
 
-<pre><code>hive > CREATE EXTERNAL TABLE fraud_detection (
+```shell
+hive > CREATE EXTERNAL TABLE fraud_detection (
     `Time` double,
     V1 double,
     V2 double,
@@ -58,12 +60,14 @@ Created a database and a table following the uploading on Hive.
 )
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY ',';
-</code></pre>
+```
 
 Load "creditcard.csv" into "fraud_detection" table:
 
-<pre><code>hive > LOAD DATA INPATH '/creditcard.csv' INTO TABLE fraud_detection;</code></pre>
+```shell
+hive > LOAD DATA INPATH '/creditcard.csv' INTO TABLE fraud_detection;```
 
 Run PySpark with .py script
 
-<pre><code> $ ./spark-submit --master yarn --queue dev /home/hadoop/fraud_script.py</code></pre>
+```shell
+$ ./spark-submit --master yarn --queue dev /home/hadoop/fraud_script.py```
