@@ -16,7 +16,7 @@ After handling configurations of Apache Hadoop, Hive and Spark, all of these app
 5919 RunJar
 ```
 <pre><code>$ hdfs dfs -put /home/arda/Downloads/creditcard.csv /</code></pre>
-Created a database and a table following the uploading on Hive.
+Creat a database and a table following the uploading on Hive.
 
 <pre><code>hive > CREATE DATABASE apache_vs_fraudster;
 </code></pre>
